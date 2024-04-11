@@ -22,6 +22,7 @@
   --white: #e3ddd9;
   --selected: #a7a09c;
   background-color: var(--white);
+  overflow-x: hidden;
 }
 .italic{
   font-family: 'playfair-italic';
@@ -33,8 +34,8 @@
   align-items: center;
 
   font-size: 1.2rem;
-  height: 100px;
-  width: 100vw;
+  height: 10vh;
+  width: 100%;
   background-color: var(--black);
 }
 #hero{
@@ -78,22 +79,31 @@
 }
 
 #content{
-  height:140vh;
+  height:90vh;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
 }
 .card{
   padding-left: 50px;
   padding-right: 50px;
 }
 #welcome-card{
-  /* background-color: var(--selected); */
   height: 20vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 4rem;
   background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(../img/banner.jpg);
+  background-size: cover;
+  background-position: center;
 }
 #about-card{
+  height: 50vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -102,7 +112,10 @@
   background-color: var(--black);
   color: var(--white);
   font-family: 'montserrat';
-  height: 50vh;
+}
+#about-text{
+  width: 60vw;
+  min-width: 900px;
 }
 #about-title{
   font-size: 2.5rem;
@@ -115,6 +128,102 @@
   font-weight: 200;
   text-align: center;
 }
-#hours-card{
-  
+#info-card{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 300px;
+  height: 20vh;
+  width: 100%;
+
+  background-color: var(--selected);
+  padding-top: 40px;
+  font-family: 'montserrat';
+}
+#location-container{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#loc-title{
+  font-weight: 600;
+}
+#hours-container{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#hours-title{
+  font-weight: 600;
+}
+
+
+#contact-card{
+  height: 10vh;
+  width: 100%;
+}
+#contact-banner{
+  background-color: var(--selected);
+  width: 100%;
+  color: var(--black);
+  text-align: center;
+  height: 20vh;
+  font-size: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#contact-form-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  font-family: 'montserrat';
+}
+#email-form{
+  display: grid;
+  grid-template-columns: repeat(3, 120px);
+  grid-template-rows: repeat(9, 40px);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  font-size: 1.2rem;
+  padding-top: 100px;
+}
+#email-label{
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+#email{
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+#subject-label{
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+#subject{
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+#body-label{
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+#body{
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 6;
+  grid-row-end: 9;
+  height: 120px;
+}
+#submit-btn{
+  grid-column-start: 3;
+  grid-column-end: 4;
+  justify-self: end;
+  width: 100px;
+  font-size: 1rem;
+  margin-top: 30px;
 }
