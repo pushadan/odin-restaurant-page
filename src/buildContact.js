@@ -62,6 +62,7 @@ function createContactCard(){
   emailForm.appendChild(subjectInput);
   emailForm.appendChild(bodyLabel);
   emailForm.appendChild(bodyInput);
+  emailForm.appendChild(submitBtn);
   contactFormContainer.appendChild(emailForm);
   contactCard.appendChild(contactFormContainer);
 

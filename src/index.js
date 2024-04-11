@@ -9,5 +9,17 @@ console.log("Everything is working! 😍");
 
 //initial load
 createHomePage();
-//createContactPage();
 
+const content = document.querySelector("#content");
+const homeBtn = document.querySelector("#home-btn");
+const contactBtn = document.querySelector("#contact-btn");
+
+homeBtn.addEventListener("click", ()=>{
+  content.querySelectorAll('*').forEach(n => n.remove());
+  createHomePage();
+})
+
+contactBtn.addEventListener("click", ()=>{
+  content.querySelectorAll('*').forEach(n => n.remove());
+  createContactPage();
+})
