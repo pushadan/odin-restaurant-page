@@ -1,7 +1,120 @@
-#main-container{
-  background-color: black;
+@font-face {
+  font-family: 'playfair';
+  src: url(../fonts/PlayfairDisplay-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: 'playfair-italic';
+  src: url(../fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: 'montserrat';
+  src: url(../fonts/Montserrat-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: 'montserrat-italic';
+  src: url(../fonts/Montserrat-Italic-VariableFont_wght.ttf);
 }
 
-#greeting{
-  color: antiquewhite;
+:root{
+  font-size: 16px;
+  font-family: 'playfair';
+  --black: #1f1c18;
+  --white: #e3ddd9;
+  --selected: #a7a09c;
+  background-color: var(--white);
+}
+.italic{
+  font-family: 'playfair-italic';
+}
+
+#header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 1.2rem;
+  height: 100px;
+  width: 100vw;
+  background-color: var(--black);
+}
+#hero{
+  color: var(--white);
+  font-size: 2rem;
+  margin-left: 50px;
+  min-width: 70px;
+  /* background-image: url(../img/bowl-rice.svg); */
+  background-size: cover;
+
+}
+#nav-bar{
+  font-size: 1.5rem;
+  margin-right: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.btn{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.btn{
+  color: var(--white);
+}
+.btn:hover{
+  color: var(--selected)
+}
+.unbuttonize{
+  /* // This removes styles added by default to button elements.
+  // For when something should semantically be a button,
+  // but isn't buttony in appearance. */
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  text-align: inherit;
+  font: inherit;
+  border-radius: 0;
+  appearance: none;
+}
+
+#content{
+  height:140vh;
+}
+.card{
+  padding-left: 50px;
+  padding-right: 50px;
+}
+#welcome-card{
+  /* background-color: var(--selected); */
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(../img/banner.jpg);
+}
+#about-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--black);
+  color: var(--white);
+  font-family: 'montserrat';
+  height: 50vh;
+}
+#about-title{
+  font-size: 2.5rem;
+  font-family: 'playfair';
+  font-weight: 200;
+}
+#about-text{
+  font-size: 1.6rem;
+  line-height: 3rem;
+  font-weight: 200;
+  text-align: center;
+}
+#hours-card{
+  
 }
